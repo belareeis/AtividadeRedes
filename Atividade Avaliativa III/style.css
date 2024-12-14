@@ -7,21 +7,33 @@
 }
 
 body{
+    height: 100vh;
     font-family: Poppins;
-    background-color: #e2e8f0;
+    background: linear-gradient(120deg, #e2e8f0, #0369a1);
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
+#online{
+    background-color: #16a34a;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
 #chat-conteiner{
-    background: rgba(255, 255, 255, 0.15);
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.40);
     backdrop-filter: blur(15px);
-    border-radius: 20px;
+    border-radius: 10px;
+    border: solid 1px #1e3a8a;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
-    width: 30%;
+    width: 300px;
+    height: 500px;
     max-width: 400px;
 }
 
@@ -30,14 +42,22 @@ header{
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
-    border-bottom: solid 1px #555;
-}
-
-hr{
-
-    padding-bottom: 5px;
+    border-bottom: solid 1px #1e3a8a;
 }
 
 .users{
+    border-radius: 5px;
+    margin: 15px;
+    border: solid #1e3a8a 1px;
+    width: 250px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.199);
+    
+}
 
+.users:hover{
+    transition: ease-in-out 0.3s;
+    background-color: #1e3a8a;
+    color: #e2e8f0;
 }
