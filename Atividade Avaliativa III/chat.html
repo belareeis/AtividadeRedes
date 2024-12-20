@@ -7,39 +7,36 @@
     <title>Chat</title>
 </head>
 <body>
-
-    
-    <div id="chat-conteiner">
-        
+    <div id="chat-container">
         <header>
-                
-            <div id="online" ></div>
-
-            <h1>Onlines</h1>
-    
-    
+            <div id="online"></div>
+            <h1 id="chat-header">Chat</h1>
         </header>
-        
-        <div class="users">
 
-            <h2>Isabela</h2>
-
+        <div class="chat-box">
+            <div class="chat-message user">Oi!</div>
+            <div class="chat-message">Oi! Tudo bem?</div>
+            <div class="chat-message user">Tudo bem, e você?</div>
         </div>
-        
-        <div class="users">
 
-            <h2>Ramon</h2>
-
-        </div>
-        
-        <div class="users">
-
-            <h2>Allyce</h2>
-
+        <div class="chat-input">
+            <input type="text" placeholder="Digite sua mensagem...">
+            <button>Enviar</button>
         </div>
         
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const chatHeader = document.getElementById('chat-header');
+
+        if (name) {
+            chatHeader.textContent = `Chat com ${name}`;
+        }
+
+    </script>
+
 </body>
 </html>
