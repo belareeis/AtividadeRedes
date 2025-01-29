@@ -18,25 +18,18 @@
             <div class="chat-message">Oi! Tudo bem?</div>
             <div class="chat-message user">Tudo bem, e você?</div>
         </div>
-
+        
         <div class="chat-input">
-            <input type="text" placeholder="Digite sua mensagem...">
-            <button>Enviar</button>
+            <input type="text" id="inpt-msg" placeholder="Digite sua mensagem...">
+             <button id="btn-send">Enviar</button>
         </div>
+
         
     </div>
 
-    <script>
-        
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get('name');
-        const chatHeader = document.getElementById('chat-header');
-
-        if (name) {
-            chatHeader.textContent = `Chat com ${name}`;
-        }
-
-    </script>
+    
+    <script src="websocket.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
