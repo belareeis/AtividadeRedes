@@ -38,4 +38,5 @@ function displayMessage(user, message) {
     messageDiv.textContent = `${user}: ${message}`;
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
+    
 }

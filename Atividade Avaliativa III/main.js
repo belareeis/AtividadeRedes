@@ -20,3 +20,17 @@ function sendMessage(message) {
     const arr = { user: me, msg: message };
     ws.send(JSON.stringify(arr));
 }
+
+function displayMessage(temp){
+    chat = Document.getElementById("user-container")
+    classname = "chat-message"
+    if(temp.user == me){
+        classname += " user"
+    }
+    
+    chat.innerHTML = chat.innerHTML + "<div class ='"+ classname +"'>" + temp.msg + "</div>"
+
+    
+
+}
+
